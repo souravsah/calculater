@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body{
+    height: 100vh;
+    /* width: 100vh; */
+    background-color: var(--Verydarkdesaturatedblue);
+    position: relative;
+}
+.calculator .calc {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    height: 2.5rem;
+    text-align: center;
+    padding: 0.4rem 0.4rem;
+    
+} 
+.calculator{
+height: auto;
+
+width: 40%;    
+position: absolute;
+top: 50%;
+left: 50%;
+border-radius: 90px 0 90px 0;
+transform: translate(-50%,-50%);
+background-color:var(--screenback);
+padding: 2rem;
+}
+:root{
+    --screenback: hsl(224, 36%, 15%);
+    --red:hsl(6, 63%, 50%);
+    --Verydarkdesaturatedblue: hsl(222, 26%, 31%);
+    --Verydarkdesaturatedbluetoggle : hsl(223, 31%, 20%);
+    --keybackgriund: hsl(225, 21%, 49%);
+}
+.number{
+display: grid;
+grid-template-columns: repeat(4,2fr);
+grid-template-rows: repeat(4,2fr);
+grid-template-areas: "seven eight nine del"
+                     "four five six plus"
+                     "one two three minus"
+                     "dot zero frontslah multiply"
+                     "reset reset equal equal";
+                     
+background-color: var(--Verydarkdesaturatedbluetoggle);
+width: 100%;
+padding: 2rem;                    
+grid-gap: 0.5rem;     
+border-radius: 5px;
+}
+.number div:hover{
+    cursor: pointer;
+    transition: all ease 0.1sec;
+}
+#unique1 div{
+    background-color: red;
+}
+.calculator .screen{
+    height: 4rem;
+    width: auto;
+    padding: 1rem;
+    margin-bottom: 10px;
+    background-color:var(--Verydarkdesaturatedbluetoggle);
+    border-radius: 5px;
+}
+.number > div {
+    padding-top: 0.7rem;
+    color: var(--Verydarkdesaturatedbluetoggle);
+   text-align: center;
+   border-radius: 0.3rem;
+}
+.number > div h1{
+    text-align: center;
+}
+.calculator .second {
+    display: flex;
+}
+.calculator .second .first {
+    background-color:white;
+    width: 3rem;
+    height: 0.9rem;
+    margin-top:0.2rem;
+    margin-left: 0.3rem;
+    border-radius: 8px ;
+    display: flex;
+}
+.calculator .second .first div {
+background-color: red;
+height: 0.9rem;
+
+width:1rem ;
+
+border-radius: 8px;
+}
+.calculator .second .first div:nth-child(2) {
+background-color: transparent;
+}
+.calculator .second .first div:nth-child(3) {
+background-color: transparent;
+}
+.seven{
+    grid-area: seven;
+    height: 3rem;
+    background-color:white;
+}
+.eight{
+    grid-area:eight;
+    height: 3rem;
+    background-color:white;
+}
+.nine{
+    height: 3rem;
+    background-color:white;
+    grid-area:nine;
+}
+.del{
+    height: 3rem;
+    background-color:var(--keybackgriund);
+    grid-area:del;
+}
+.four{
+    height: 3rem;
+    background-color:white;
+    grid-area:four;
+}
+.five{
+    height: 3rem;
+    background-color:white;
+    grid-area:five;
+}
+.six{
+    height: 3rem;
+    background-color:white;
+    grid-area:six;
+}
+.plus{
+    height: 3rem;
+    background-color:white;
+    grid-area: plus;
+}
+.one{
+    height: 3rem;
+    background-color:white;    
+    grid-area: one;
+}
+.two{
+    height: 3rem;
+    background-color:white;
+    grid-area: two;
+}
+.three{
+    height: 3rem;
+    background-color:white;
+    grid-area: three;
+}
+.minus{
+    height: 3rem;
+    background-color:white;
+    grid-area: minus;
+}
+.dot{
+    height: 3rem;
+    background-color:white;
+    grid-area: dot;
+}
+.zero{
+    height: 3rem;
+    background-color:white;
+    grid-area: zero;
+}
+.frontslah{
+    height: 3rem;
+    background-color:white;
+    grid-area: frontslah;
+}
+.multiply{
+    height: 3rem;
+    grid-area: multiply;
+    background-color:white;
+}
+.reset{
+    height: 3rem;
+    background-color:var(--keybackgriund);
+    grid-area: reset;
+
+}
+.equal{
+    height: 3rem;
+grid-area: equal;
+background-color:var(--red);
+}
+@media(max-width:768px){
+.calculator{
+width: 95%;
+}
+}
+@media(max-width:1024px){
+    .calculator{
+        width: 80%;
+        /* height: 50%; */
+    }
+}
+@media(width:540px ){
+.calculator{
+    height: 90%;
+}
+}
+@media(width:320px){
+    .calculator{
+        width: 95%;
+    }
+}
+@media(width:1024px)
+{
+    .calculator{
+        height: 60%;
+    }
+    .calculator .number{
+        height: 70%;
+    }
+    .calculator .screen{
+        height: 20%;
+    }
+}
+@media(width:280px){
+.calculator{
+width: 100%;
+}
+}
